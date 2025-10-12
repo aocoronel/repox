@@ -24,8 +24,8 @@ Commands:
 
 Flags:
   -h, --help           Displays this message and exits
-  -p <parallel>        Set parallels to use
-  -c <path/to/repox>   Use a specific repox file
+  -p <PARALLEL>        Set parallels to use
+  -c <FILE>            Use a specific repox file
 EOF
 }
 

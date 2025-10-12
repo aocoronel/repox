@@ -1,20 +1,27 @@
-# Run git commands in bulk
+# A git repository utility
 
-`repox` is a tool that allows you to run git commands in a different local repositories, including cloning, fetching, pulling, pushing and checking status in bulk, and async.
+`repox` is a tool that allows you to run git commands in a different local repositories, including cloning, fetching, pulling, pushing and checking status in bulk. Of course, everything concurrently.
 
 Currently only the commands listed above are supported.
 
-## Features
-
-- Run multiple commands at once
+This project has two implementations: One in Bash, and the other in Rust.
 
 ## Installation
+
+### Shell Script
 
 ```bash
 git clone https://github.com/aocoronel/repox
 cd repox
-mv src/repox $HOME/.local/bin
-chmod +x "$HOME/.local/bin/repox"
+chmod +x src/repox && mv src/repox $HOME/.local/bin
+```
+
+### Rust
+
+```bash
+git clone https://github.com/aocoronel/repox
+cd repox
+cargo build --release
 ```
 
 ## Usage
@@ -35,8 +42,8 @@ Commands:
 
 Flags:
   -h, --help           Displays this message and exits
-  -p <parallel>        Set parallels to use
-  -c <path/to/repox>   Use a specific repox file
+  -p <PARALLEL>        Set parallels to use
+  -c <FILE>            Use a specific repox file
 ```
 
 ### Configuration
@@ -49,6 +56,7 @@ The repox file should contain a link to a Git Remote per line, as follows:
 ssh://git@github.com/aocoronel/doppel.git
 ssh://git@github.com/aocoronel/dotfiles.git
 https://github.com/aocoronel/repox.git
+# https://github.com/aocoronel/repox.git # Comments are ignored
 ```
 
 When running `repox` it will also use the `DEV` environment variable, which is the main directory where the git repositories are managed by `repox`.
