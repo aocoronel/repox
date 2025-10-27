@@ -4,11 +4,15 @@
 
 Currently only the commands listed above are supported.
 
-This project has two implementations: One in Bash, and the other in Rust.
+This project has two implementations: One in **Bash**, and the other in **Rust**. Both version work the same.
+
+## Requirements
+
+- git
 
 ## Installation
 
-### Shell Script
+### Shell Version
 
 ```bash
 git clone https://github.com/aocoronel/repox
@@ -16,12 +20,13 @@ cd repox
 chmod +x src/repox && mv src/repox $HOME/.local/bin
 ```
 
-### Rust
+### Rust Version
 
 ```bash
 git clone https://github.com/aocoronel/repox
 cd repox
 cargo build --release
+mv target/release/repox $HOME/.local/bin
 ```
 
 ## Usage
