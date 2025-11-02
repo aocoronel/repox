@@ -1,5 +1,8 @@
 # A git repository utility
 
+> [!WARNING]
+> This repository has been moved to Codeberg. Find it at [aocoronel/repox](https://codeberg.org/aocoronel/repox).
+
 `repox` is a tool that allows you to run git commands in a different local repositories, including cloning, fetching, pulling, pushing and checking status in bulk. Of course, everything concurrently.
 
 Currently only the commands listed above are supported.
